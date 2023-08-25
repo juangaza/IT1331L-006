@@ -2,9 +2,9 @@
 <html>
 <head>
     <title>Animal Information</title>
-    <style>
+    <style> 
         table{
-            border-collapse: collapse;
+            border-collapse: collapse; 
             width: 100%;
         }
 
@@ -18,20 +18,98 @@
             background-color: #f2f2f2;
         }
     </style>
-</head>
+</head><!--The code block 4-19 would be the basic CSS design for the table-->
 <body>
     <h1>Animal Information</h1>
     <div id="animal-table"></div>
 
     <script>
         let tableHTML = '<table>';
-        tableHTML += '<tr><th>Animal ID </th> <th>Animal Name</th> <th>Owner Name</th> <th> Weight</th> <th> Age </th> </tr>';
-    
+        tableHTML += '<tr><th>Animal ID </th> <th>Animal Name</th> <th>Owner Name</th> <th> Weight</th>  <th> Age </th> <th> Age Bracket </th></tr>'; //this would be for the labels of the table head 
+            // So i had to add the age bracket column for preparation
         const animals = [
-            { id: 1, name: "Fluffy", owner: "Alice", weight: 12, age: 3 },
-            { id: 2, name: "Max", owner: "Bob", weight: 20, age: 5 },
+            { id: 1, name: "Fluffy", owner: "Alice", weight: 12, age: 3 },// this would be the dummy initial dummy data 
+            { id: 2, name: "Max", owner: "Bob", weight: 20, age: 5 }, // will not remove this for my reference 
+
+            // this is for the ages less than 0.9
+            { id: 3, name: "Puppy", owner: "Alice", weight: 2, age: 0.6 }, //data
+            { id: 4, name: "Kitten", owner: "Bob", weight: 1, age: 0.7 },
+            { id: 5, name: "Chick", owner: "Carol", weight: 0.1, age: 0.4 },
+            { id: 6, name: "Piglet", owner: "Dave", weight: 8, age: 0.8 },
+
+            // this is for the ages less than 0.9 – 10
+            { id: 7, name: "Buddy", owner: "Eve", weight: 15, age: 2 },
+            { id: 8, name: "Greg", owner: "Frank", weight: 9, age: 3 },
+            { id: 9, name: "Luna", owner: "Grace", weight: 5, age: 6 },
+            { id: 10, name: "Bato", owner: "Hank", weight: 12, age: 8 },
+
+            // this is for ages 10.1 – 15
+            { id: 11, name: "Laars", owner: "Zoe", weight: 12, age: 12 },
+            { id: 12, name: "Grub", owner: "Annika", weight: 10, age: 13 },
+            { id: 13, name: "Lana", owner: "Janiel", weight: 7, age: 11 },
+            { id: 14, name: "Rock", owner: "Nico", weight: 11, age: 10 },
+
+            // this is for ages more tan 15
+            { id: 15, name: "Yana", owner: "Luis", weight: 12, age: 17 },
+            { id: 16, name: "Grogu", owner: "Din", weight: 10, age: 18 },
+            { id: 17, name: "Raffa", owner: "Nico", weight: 7, age: 16 },
+            { id: 18, name: "Terol", owner: "Sledge", weight: 11, age: 18 },
+
         ];
-    
+        const animal1 = animals[0]; // the constant is for the value when you know it should not be changed //this is the first animal
+        const animal2 = animals[1];
+        const animal3 = animals[2];
+        const animal4 = animals[3];
+        const animal5 = animals[4];
+        const animal6 = animals[5];
+        const animal7 = animals[6];
+        const animal8 = animals[7];
+        const animal9 = animals[8];
+        const animal10 = animals[9];
+        const animal11 = animals[10];
+        const animal12 = animals[11];
+        const animal13 = animals[12];
+        const animal14 = animals[13];
+        const animal15 = animals[14];
+        const animal16 = animals[15];
+        const animal17 = animals[16];
+        const animal18 = animals[17];
+
+
+
+        // this is for the displaying of each individual data 
+        // next is to display the additional dat
+        tableHTML += `<tr><td>${animal1.id}</td><td>${animal1.name}</td><td>${animal1.owner}</td><td>${animal1.weight}</td><td>${animal1.age}</td></tr>`; // this is to show the dummy data similar to Django
+        tableHTML += `<tr><td>${animal2.id}</td><td>${animal2.name}</td><td>${animal2.owner}</td><td>${animal2.weight}</td><td>${animal2.age}</td></tr>`; // the animal2 is somehow the id for specifying the individual animal details
+/////////////////////////////////////////////////////////// 
+//this part is the 16 official data as per instructions
+        tableHTML += `<tr><td>${animal3.id}</td><td>${animal3.name}</td><td>${animal3.owner}</td><td>${animal3.weight}</td><td>${animal3.age}</td></tr>`;
+        tableHTML += `<tr><td>${animal4.id}</td><td>${animal4.name}</td><td>${animal4.owner}</td><td>${animal4.weight}</td><td>${animal4.age}</td></tr>`;
+        tableHTML += `<tr><td>${animal5.id}</td><td>${animal5.name}</td><td>${animal5.owner}</td><td>${animal5.weight}</td><td>${animal5.age}</td></tr>`;
+        tableHTML += `<tr><td>${animal6.id}</td><td>${animal6.name}</td><td>${animal6.owner}</td><td>${animal6.weight}</td><td>${animal6.age}</td></tr>`;
+        tableHTML += `<tr><td>${animal7.id}</td><td>${animal7.name}</td><td>${animal7.owner}</td><td>${animal7.weight}</td><td>${animal7.age}</td></tr>`;
+        tableHTML += `<tr><td>${animal8.id}</td><td>${animal8.name}</td><td>${animal8.owner}</td><td>${animal8.weight}</td><td>${animal8.age}</td></tr>`;
+        tableHTML += `<tr><td>${animal9.id}</td><td>${animal9.name}</td><td>${animal9.owner}</td><td>${animal9.weight}</td><td>${animal9.age}</td></tr>`;
+        tableHTML += `<tr><td>${animal10.id}</td><td>${animal10.name}</td><td>${animal10.owner}</td><td>${animal10.weight}</td><td>${animal10.age}</td></tr>`;
+        tableHTML += `<tr><td>${animal11.id}</td><td>${animal11.name}</td><td>${animal11.owner}</td><td>${animal11.weight}</td><td>${animal11.age}</td></tr>`;
+        tableHTML += `<tr><td>${animal12.id}</td><td>${animal12.name}</td><td>${animal12.owner}</td><td>${animal12.weight}</td><td>${animal12.age}</td></tr>`;
+        tableHTML += `<tr><td>${animal13.id}</td><td>${animal13.name}</td><td>${animal13.owner}</td><td>${animal13.weight}</td><td>${animal13.age}</td></tr>`;
+        tableHTML += `<tr><td>${animal14.id}</td><td>${animal14.name}</td><td>${animal14.owner}</td><td>${animal14.weight}</td><td>${animal14.age}</td></tr>`;
+        tableHTML += `<tr><td>${animal15.id}</td><td>${animal15.name}</td><td>${animal15.owner}</td><td>${animal15.weight}</td><td>${animal15.age}</td></tr>`;
+        tableHTML += `<tr><td>${animal16.id}</td><td>${animal16.name}</td><td>${animal16.owner}</td><td>${animal16.weight}</td><td>${animal16.age}</td></tr>`;
+        tableHTML += `<tr><td>${animal17.id}</td><td>${animal17.name}</td><td>${animal17.owner}</td><td>${animal17.weight}</td><td>${animal17.age}</td></tr>`;
+        tableHTML += `<tr><td>${animal18.id}</td><td>${animal18.name}</td><td>${animal18.owner}</td><td>${animal18.weight}</td><td>${animal18.age}</td></tr>`;
+/////////// all data were displayed 
+
+
+
+
+
+
+
+
+
+
         tableHTML += '</table>';
         document.getElementById('animal-table').innerHTML = tableHTML;
     </script>
