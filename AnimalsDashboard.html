@@ -26,14 +26,15 @@
     <script>
         let tableHTML = '<table>';
         tableHTML += '<tr><th>Animal ID </th> <th>Animal Name</th> <th>Owner Name</th> <th> Weight</th> <th> Age </th> </tr>';
-
-        const animals =[
-            {id: 1, name: "Fluffy", owner: "Alice", weight: 12, age: 3},
-            {id: 2, name: "Max", owner: "Bob", weight: 20, age: 5},
+    
+        const animals = [
+            { id: 1, name: "Fluffy", owner: "Alice", weight: 12, age: 3 },
+            { id: 2, name: "Max", owner: "Bob", weight: 20, age: 5 },
         ];
-
-        table +='</table>';
+    
+        tableHTML += '</table>';
         document.getElementById('animal-table').innerHTML = tableHTML;
     </script>
+    
 </body>
 </html>
